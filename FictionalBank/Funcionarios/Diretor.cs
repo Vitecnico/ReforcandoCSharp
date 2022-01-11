@@ -8,9 +8,14 @@ namespace FictionalBank.Funcionarios
 {
     public class Diretor : Funcionario
     {
-        public Diretor(string name, int idade, double salario) : base(name, idade, salario)
+        public Diretor(string name, string cpf, int idade, double salario) : base(name, cpf, idade, salario)
         {
-            Console.WriteLine("teste");
+            Console.WriteLine("Criando diretor(a) " + name);
+        }
+
+        public override double GetBonificacao() 
+        {
+            return Salario;
         }
     }
 }
