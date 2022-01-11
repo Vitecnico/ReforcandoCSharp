@@ -13,9 +13,11 @@ namespace FictionalBank
         static void Main(string[] args)
         {
             Funcionario bruno = new Funcionario("Bruno", 34, 2500);
+            Funcionario laura = new Diretor("Laura", 41, 4000);
             Console.WriteLine(123 - 321);
             Console.WriteLine(bruno.Name);
-            Console.WriteLine(bruno.Idade);
+            Console.WriteLine(laura.GetType());
+            Console.WriteLine(laura.Idade);
             Console.ReadLine();
             
         }

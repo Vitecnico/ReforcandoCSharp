@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FictionalBank.Funcionarios
 {
-    internal class Diretor
+    public class Diretor : Funcionario
     {
+        public Diretor(string name, int idade, double salario) : base(name, idade, salario)
+        {
+            Console.WriteLine("teste");
+        }
     }
 }

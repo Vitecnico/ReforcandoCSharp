@@ -8,9 +8,9 @@ namespace FictionalBank.Funcionarios
 {
     public class Funcionario
     {
-        public string Name { get; set; }
-        public int Idade { get; set; }
-        public double Salario { get; set; }
+        public string Name { get; private set; }
+        public int Idade { get; private set; }
+        public double Salario { get; private set; }
 
         public Funcionario(string name,int idade, double salario)
         { 
