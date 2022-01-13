@@ -1,10 +1,11 @@
-﻿using System;
+﻿using FictionalBank.Financas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FictionalBank.Funcionarios;
-using FictionalBank.Sistema;
+//using FictionalBank.Funcionarios;
+//using FictionalBank.Sistema;
 
 namespace FictionalBank
 {
@@ -14,12 +15,16 @@ namespace FictionalBank
         static void Main(string[] args)
         {
             Console.WriteLine("Infos");
-            CriacaoDeFuncionarios();
+            CriacaoDeContas();
             Console.ReadLine();
             
         }
+        static void CriacaoDeContas() 
+        {
+            ContaCorrente conta = new ContaCorrente(21,1000);
+        }
 
-        static void CriacaoDeFuncionarios() 
+    /*   static void CriacaoDeFuncionarios() 
         {
             SistemaInterno sistemaInterno = new SistemaInterno();
             Programador bruno = new Programador("Bruno","000.000.000-01", 34, 2500);
@@ -35,7 +40,7 @@ namespace FictionalBank
             sistemaInterno.Logar(laura, "abc");
             sistemaInterno.Logar(parceiro, "abcd");
 
-        }
-      
+        }*/
+
     }
 }

@@ -13,6 +13,7 @@ namespace FictionalBank.Funcionarios
         public int Idade { get; private set; }
         public double Salario { get; protected set; }
         //o salario será protected para que seja modificado apenas pelas classes funcionario e seus filhos(como a classe diretor).
+        public static int ContadorDeFuncionarios { get; private set; }
 
         public Funcionario(string name, string cpf, int idade, double salario)
         { 
@@ -20,7 +21,8 @@ namespace FictionalBank.Funcionarios
             CPF = cpf;
             Idade = idade;
             Salario = salario;
-            
+            ContadorDeFuncionarios++;
+            Console.WriteLine("Funcionario de numero: " + ContadorDeFuncionarios);
         }
 
         public abstract double GetBonificacao();// A partir de 13/01/22 a bonificação de de cada cargo é diferente 
@@ -33,6 +35,7 @@ namespace FictionalBank.Funcionarios
             Console.WriteLine("Idade: "+Idade);
             Console.WriteLine("Salario: "+Salario);
             Console.WriteLine("bonificação: " +GetBonificacao());//a bonificação 
+            
             Console.WriteLine("");
 
         }
