@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FictionalBank.Funcionarios
 {
-    internal class GerenteDeContas : Funcionario
+    internal class GerenteDeContas : FuncionarioAutenticavel
     {
         public GerenteDeContas(string name, string cpf, int idade, double salario) : base(name, cpf, idade, salario)
         {
