@@ -11,5 +11,9 @@ namespace FictionalBank.Funcionarios
         public Programador(string name, string cpf, int idade, double salario) : base(name, cpf, idade, salario)
         {
         }
+        public override double GetBonificacao()
+        {
+            return Salario * 0.15;
+        }
     }
 }

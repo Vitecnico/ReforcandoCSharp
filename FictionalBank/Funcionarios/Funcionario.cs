@@ -23,11 +23,8 @@ namespace FictionalBank.Funcionarios
             
         }
 
-        public virtual double GetBonificacao() 
-        { 
-           return Salario * 0.10;
-            //aqui como exemplo o funcionario da FictionalBank recebe 10% do proprio salario como bonificação, a não ser que ele tenha um cargo de diretor
-        }
+        public abstract double GetBonificacao();// A partir de 13/01/22 a bonificação de de cada cargo é diferente 
+        
         public void GetInformacaoFuncionarios()
         {
             Console.WriteLine("");
