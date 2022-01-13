@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FictionalBank.Funcionarios
 {
-    public class Funcionario
+    public abstract class Funcionario
     {
         public string Name { get; private set; }
         public string CPF { get; private set; }
