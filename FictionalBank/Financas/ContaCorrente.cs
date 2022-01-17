@@ -54,19 +54,22 @@ namespace FictionalBank.Financas
 
         public ContaCorrente(int agencia, int numero)
         {
+            TotalDeContasCriadas++;
             Agencia = agencia;
             Numero = numero;
             try
             {
                 TaxaOperacao = 30 / TotalDeContasCriadas;
+                Console.WriteLine("");
             }
             catch (DivideByZeroException)
             {
-                throw new Exception("Não é possivel dividir por zero");
+                Console.WriteLine("Não é possivel dividir por zero");
+                throw;
 
             }
             
-            TotalDeContasCriadas++;
+            
 
         }
 

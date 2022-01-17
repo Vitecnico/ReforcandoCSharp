@@ -12,7 +12,7 @@ namespace FictionalBank.Funcionarios
         public string CPF { get; private set; }
         public int Idade { get; private set; }
         public double Salario { get; protected set; }
-        //o salario será protected para que seja modificado apenas pelas classes funcionario e seus filhos(como a classe diretor).
+        //o setter do salario será protected para que seja modificado apenas pelas classes funcionario e seus filhos(como a classe diretor).
         public static int ContadorDeFuncionarios { get; private set; }
 
         public Funcionario(string name, string cpf, int idade, double salario)
