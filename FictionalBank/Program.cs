@@ -21,7 +21,16 @@ namespace FictionalBank
         }
         static void CriacaoDeContas() 
         {
-            ContaCorrente conta = new ContaCorrente(21,1000);
+            try
+            {
+                ContaCorrente conta = new ContaCorrente(0, 0);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Argumento com problema: " + ex.ParamName);
+                Console.WriteLine(ex.Message);
+            }
+            
         }
 
     /*   static void CriacaoDeFuncionarios() 
